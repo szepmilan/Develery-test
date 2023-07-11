@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Messages
+{% endblock %}
+
+{% block body %}
+  <h1>Messages ({{ messages|length }})</h1>
+  
+  {% for message in app.flashes('success') %}
+    <div class="flash-container">
+      <div class="flash-success">
+        {{ message }}
+      </div>
+    </div>
+  {% endfor %}
+  <a class="new-message" href="/messages/create">Create new message</a>
+  <div class="list">
+    <div class="container">
+      <ul>
+        {% for message in messages %}
+          <li>
+            Név: <span class="message-name">{{ message.name }}</span>
+            Email: <span class="message-email">{{ message.email }}</span>
+            {# <span class="message-text">Message: {{ message.text }}</span> #}
+            <a href="/messages/{{ message.id }}" class="message-link">Read message</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

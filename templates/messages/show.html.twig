@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Message
+{% endblock %}
+
+{% block body %}
+  <h1>
+    Message id: {{message.id}}
+  </h1>
+  <div class="list">
+    <div class="container">
+      <ul>
+        <li>
+          Név: <span class="message-name">{{ message.name }}</span>
+          Email: <span class="message-email">{{ message.email }}</span>
+          Message: <span class="message-text">{{ message.text }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="bh-button"><a href="/messages" class="back-home">Back to messages</a></div>
+{% endblock %}

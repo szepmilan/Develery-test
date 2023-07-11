@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+            {#{ encore_entry_link_tags('app') }#}
+            <style>
+body {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+div {
+  width: 100%;
+}
+.flash-success {
+  background-color: green;
+  color: white;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.message-name {
+  font-weight: normal;
+}
+
+.message-email {
+  font-weight: normal;
+}
+.message-text {
+  font-weight: normal;
+}
+
+.container {
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  width: 90%;
+  padding: 8px 0;
+  justify-content: center;
+}
+.list {
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+li {
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
+.message-link {
+  position: relative;
+  background-color: #04aa6d;
+  border: none;
+  color: #ffffff;
+  font-size: 0.7rem;
+  margin-left: 5px;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+.message-link:hover {
+  background-color: #327032;
+}
+.new-message {
+  display: block;
+  position: relative;
+  width: fit-content;
+  background-color: #239bad;
+  border: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-left: 5px;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin: 15px 0;
+  left: 5%;
+}
+.new-message:hover {
+  background-color: #1c6e7a;
+}
+
+.back-home {
+  display: block;
+  width: fit-content;
+  background-color: #239bad;
+  border: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin: 15px 0;
+}
+.back-home:hover {
+  background-color: #1c6e7a;
+}
+.bh-button {
+  display: flex;
+  justify-content: center;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 80%;
+  background-color: gold;
+  border-radius: 25px;
+  padding: 10px 0;
+}
+label {
+  display: flex;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 5px;
+  text-align: left;
+  font-weight: bold;
+}
+input {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 5px;
+  width: calc(100% - 44px);
+  text-align: left;
+}
+textarea {
+  display: flex;
+  margin: 5px 20px;
+  width: calc(100% - 44px);
+  text-align: left;
+  height: 100px;
+}
+.submit-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+form button {
+  display: block;
+  width: fit-content;
+  background-color: #082a5c;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-top: 5px;
+}
+form button:hover {
+  background-color: #041733;
+}
+.flash-container {
+  display: flex;
+  justify-content: center;
+}
+            </style>
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{ encore_entry_script_tags('app') }#}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

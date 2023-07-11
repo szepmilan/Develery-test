@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Create Message
+{% endblock %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  <style>
+  .bh-button{
+    justify-content: left;
+    position: relative;
+    left: 10%;
+  }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <h1>Create Message</h1>
+  <div class="bh-button"><a href="/messages" class="back-home">Back to messages</a></div>
+  {% for message in app.flashes('error') %}
+    <div class="flash-error">
+        {{ message }}
+    </div>
+  {% endfor %}
+  <div class="form-container">
+  {{ form_start(form)}}
+    {{ form_widget(form) }}
+    <div class="submit-container"><button type="submit">Submit</button></div>
+  {{ form_end(form) }}
+  </div>
+{% endblock %}
